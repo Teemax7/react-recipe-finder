@@ -1,21 +1,26 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-export default function RecipeCard({ recipe }) {
+export default function RecipeCard({ recipe, onToggleFavorite, isFavorite }) {
   return (
-    <div className="bg-white shadow rounded-lg overflow-hidden">
+    <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
       <Link to={`/recipe/${recipe.idMeal}`}>
         <img
-          src={recipe.strMealThumb}
+          src={recipe.strMealThumb || "https://via.placeholder.com/300x200"}
           alt={recipe.strMeal}
-          className="w-full h-44 object-cover"
+          className="w-full h-48 object-cover"
         />
       </Link>
       <div className="p-4">
-        <h3 className="text-lg font-semibold">
-          <Link to={`/recipe/${recipe.idMeal}`}>{recipe.strMeal}</Link>
-        </h3>
-        <p className="text-sm text-gray-500 mt-1">{recipe.strArea || ""}</p>
+        <h3 className="text-lg font-bold text-gray-800">{recipe.strMeal}</h3>
+        <p className="text-sm text-gray-500 mt-1">{recipe.strArea || "Cuisine"}</p>
+        <button
+          onClick={() => onToggleFavorite(recipe)}
+          className={`mt-4 w-full px-4 py-2 rounded-xl font-medium text-white ${
+            isFavorite ? "bg-red-500 hover:bg-red-600" : "bg-green-500 hover:bg-green-600"
+          }`}
+        >
+          {isFavorite ? "Remove Favorite" : "Add to Favorites"}
+        </button>
       </div>
     </div>
   );

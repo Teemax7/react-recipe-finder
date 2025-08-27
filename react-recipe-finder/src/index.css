@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Optional: Global custom styles */
+body {
+  background-color: #f9fafb; /* Light gray background */
+  font-family: 'Poppins', sans-serif;
+}
