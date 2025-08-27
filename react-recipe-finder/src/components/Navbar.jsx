@@ -1,23 +1,23 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-10 bg-white/80 backdrop-blur border-b border-gray-200">
-      <nav className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-        {/* Logo / Brand */}
-        <a href="/" className="flex items-center gap-2">
-          <span className="inline-block h-8 w-8 rounded-xl bg-green-500" />
-          <span className="text-lg font-semibold text-gray-900">Recipe Finder</span>
-        </a>
+    <nav className="bg-green-600 text-white shadow-md">
+      <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+        <Link to="/" className="text-lg font-semibold">
+          Recipe Finder
+        </Link>
 
-        {/* Links */}
-        <div className="flex items-center gap-6">
-          <a href="/" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+        <div className="flex items-center gap-4">
+          <Link to="/" className="hover:text-gray-200">
             Home
-          </a>
-          <a href="/favorites" className="text-sm font-medium text-gray-700 hover:text-gray-900">
+          </Link>
+          <Link to="/favorites" className="hover:text-gray-200">
             Favorites
-          </a>
+          </Link>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }
