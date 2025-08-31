@@ -85,7 +85,7 @@ If you’d like to connect or collaborate, you can reach out via:
 
  Added about page
 
- Deployment to Vercel/Netlify 
+ Deployment to Vercel
 
 📖 Reflection
 ✔️ Accomplishments
