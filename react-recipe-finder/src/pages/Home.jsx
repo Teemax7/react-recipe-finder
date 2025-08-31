@@ -20,7 +20,7 @@ export default function Home({ favorites, onToggleFavorite }) {
   return (
     <div className="space-y-8">
       {/* Hero Section */}
-      <div className="bg-[url('https://via.placeholder.com/1440x400')] bg-cover bg-center rounded-2xl p-12 text-center text-white shadow-card">
+      <div className="bg-[url('https://via.placeholder.com/1440x400')] bg-cover bg-center rounded-2xl p-12 text-center text-black shadow-card">
         <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">Discover Delicious Recipes</h1>
         <p className="text-lg mb-6 drop-shadow-md">Search by name, ingredient, or cuisine</p>
         <SearchBar onSearch={fetchRecipes} />

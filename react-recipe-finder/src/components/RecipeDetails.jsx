@@ -30,7 +30,7 @@ export default function RecipeDetails({ onToggleFavorite }) {
       <h1 className="text-3xl font-bold text-primary mb-4">{recipe.strMeal}</h1>
       <button
         onClick={() => onToggleFavorite(recipe)}
-        className="mb-6 px-4 py-2 rounded-xl font-medium bg-primary hover:bg-green-600 text-white"
+        className="mb-6 px-4 py-2 rounded-xl font-medium bg-primary hover:bg-green-600 text-black"
       >
         Add / Remove Favorite
       </button>

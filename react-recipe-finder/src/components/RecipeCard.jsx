@@ -16,7 +16,7 @@ export default function RecipeCard({ recipe, onToggleFavorite, isFavorite }) {
         <button
           onClick={() => onToggleFavorite(recipe)}
           className={`mt-4 w-full px-4 py-2 rounded-xl font-medium ${
-            isFavorite ? "bg-red-500 hover:bg-red-600 text-white" : "bg-primary hover:bg-green-600 text-white"
+            isFavorite ? "bg-red-500 hover:bg-red-600 text-white" : "bg-primary hover:bg-green-600 text-black"
           }`}
         >
           {isFavorite ? "Remove Favorite" : "Add to Favorites"}

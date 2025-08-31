@@ -1,19 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* If not using PostCSS with Tailwind, import the compiled Tailwind CSS instead */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
 
 body {
-  background-color: var(--background);
+  background-color: #1dbad2;
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  padding: 0;
+}
+
 h1,h2,h3,h4,h5,h6 {
-  color: var(--textPrimary);
+  color: #111827;
 }
-h1,h2,h3,h4,h5,h6 {
+
 p {
-  color: var(--textSecondary);
-}
-p {
-  color: var(--textSecondary);
-}
+  color: #776b80;
 }
